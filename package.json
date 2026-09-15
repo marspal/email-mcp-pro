@@ -1,0 +1,76 @@
+{
+  "name": "email-mcp-pro",
+  "version": "1.0.0",
+  "description": "通用邮箱 MCP 服务器 - 基于 imapflow 重写 IMAP 实现，支持 IMAP ID 命令(RFC 2971)，完美兼容网易邮箱(163/126/yeah)，支持 QQ、Gmail、Outlook、企业邮箱等",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "email-mcp-pro": "./index.js",
+    "universal-email-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node test-imapflow.js",
+    "publish-check": "node scripts/publish-check.js",
+    "prepublishOnly": "npm run publish-check"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "email",
+    "smtp",
+    "imap",
+    "imapflow",
+    "imap-id",
+    "rfc-2971",
+    "163-mail",
+    "netease-mail",
+    "qq-mail",
+    "gmail",
+    "outlook",
+    "enterprise-email",
+    "email-client",
+    "email-server",
+    "auto-config",
+    "nodejs",
+    "claude-desktop"
+  ],
+  "author": "xushihao",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xushihao/email-mcp-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xushihao/email-mcp-pro/issues"
+  },
+  "homepage": "https://github.com/xushihao/email-mcp-pro#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "CONFIG_GUIDE.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.2",
+    "imapflow": "^2.0.5",
+    "mailparser": "^3.9.8",
+    "nodemailer": "^8.0.7",
+    "poplib": "^0.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@types/nodemailer": "^8.0.0"
+  },
+  "overrides": {
+    "minimist": "^1.2.8"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "universal-email": {
+      "command": "node",
+      "args": ["F:\\enterprise\\mail\\index.js"],
+      "env": {
+        "EMAIL_USER": "your-email@domain.com",
+        "EMAIL_PASSWORD": "your-password-or-auth-code",
+        "EMAIL_TYPE": "auto"
+      }
+    }
+  }
+} 

@@ -1,0 +1,46 @@
+# 测试文件
+test-*.js
+test/
+tests/
+
+# 配置文件
+.env
+.env.*
+mcp-x_config_v2.json
+
+# 开发文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 日志文件
+*.log
+logs/
+
+# 运行时文件
+.DS_Store
+Thumbs.db
+
+# Git相关
+.git/
+.gitignore
+
+# Node modules (已在默认忽略列表中)
+node_modules/
+
+# 开发依赖相关
+coverage/
+.nyc_output/
+
+# 临时文件
+tmp/
+temp/
+
+# 编辑器配置
+.editorconfig
+
+# 文档草稿
+*.draft.md
+NOTES.md 
