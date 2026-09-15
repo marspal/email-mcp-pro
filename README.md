@@ -65,7 +65,7 @@ email-mcp-pro
 ### 方式三：从源码运行
 
 ```bash
-git clone https://github.com/xushihao/email-mcp-pro.git
+git clone https://github.com/batsama/email-mcp-pro.git
 cd email-mcp-pro
 npm install
 EMAIL_USER=your-email@163.com EMAIL_PASSWORD=your-auth-code node index.js

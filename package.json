@@ -40,12 +40,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xushihao/email-mcp-pro.git"
+    "url": "https://github.com/batsama/email-mcp-pro.git"
   },
   "bugs": {
-    "url": "https://github.com/xushihao/email-mcp-pro/issues"
+    "url": "https://github.com/batsama/email-mcp-pro/issues"
   },
-  "homepage": "https://github.com/xushihao/email-mcp-pro#readme",
+  "homepage": "https://github.com/batsama/email-mcp-pro#readme",
   "engines": {
     "node": ">=16.0.0"
   },
