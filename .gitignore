@@ -72,3 +72,6 @@ pids/
 out/
 dist/
 build/ 
+# 临时测试文件
+test-mcp-*.js
+test-direct.js

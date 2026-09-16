@@ -573,7 +573,7 @@ class UniversalEmailMCPServer {
         const recentUids = allUids.slice(-Math.min(limit * 3, allUids.length));
 
         // 批量获取邮件头部信息
-        // imapflow 的 fetch 返回 AsyncGenerator，用 fetchAll 一次性获取
+        // search 返回的是 sequence number，直接传 number[] 即可
         const messages = await client.fetchAll(recentUids, {
           uid: true,
           envelope: true,
@@ -768,7 +768,8 @@ class UniversalEmailMCPServer {
       try {
         // 下载完整邮件（RFC822）
         // imapflow 的 download 返回 { meta, content }，content 是 Readable stream
-        const { meta, content } = await client.download(uid.toString());
+        // 注意：download 默认用 sequence number，必须通过 options.uid=true 指定使用 UID
+        const { meta, content } = await client.download(uid.toString(), undefined, { uid: true });
 
         if (!content) {
           throw new Error(`未找到 UID 为 ${uid} 的邮件`);
