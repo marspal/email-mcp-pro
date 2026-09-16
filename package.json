@@ -1,6 +1,6 @@
 {
   "name": "email-mcp-pro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "通用邮箱 MCP 服务器 - 基于 imapflow 重写 IMAP 实现，支持 IMAP ID 命令(RFC 2971)，完美兼容网易邮箱(163/126/yeah)，支持 QQ、Gmail、Outlook、企业邮箱等",
   "main": "index.js",
   "type": "module",
