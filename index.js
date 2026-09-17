@@ -32,11 +32,19 @@ const EMAIL_CONFIGS = {
   },
   '163': {
     name: '网易邮箱',
-    domains: ['163.com', '126.com', 'yeah.net'],
+    domains: ['163.com', 'yeah.net'],
     smtp: { host: 'smtp.163.com', port: 465, secure: true },
     imap: { host: 'imap.163.com', port: 993, secure: true },
     pop3: { host: 'pop.163.com', port: 995, secure: true },
     usePOP3: false // 魔改版：使用 imapflow + ID 命令，IMAP 已可正常工作
+  },
+  '126': {
+    name: '网易126邮箱',
+    domains: ['126.com'],
+    smtp: { host: 'smtp.126.com', port: 465, secure: true },
+    imap: { host: 'imap.126.com', port: 993, secure: true },
+    pop3: { host: 'pop.126.com', port: 995, secure: true },
+    usePOP3: false
   },
   'gmail': {
     name: 'Gmail',
@@ -217,7 +225,7 @@ class UniversalEmailMCPServer {
                 password: { type: 'string', description: '邮箱密码或授权码' },
                 provider: {
                   type: 'string',
-                  enum: ['qq', '163', 'gmail', 'outlook', 'exmail', 'aliyun', 'sina', 'sohu'],
+                  enum: ['qq', '163', '126', 'gmail', 'outlook', 'exmail', 'aliyun', 'sina', 'sohu'],
                   description: '邮箱提供商（可选，不填写则自动识别）'
                 }
               },
